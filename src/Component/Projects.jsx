@@ -51,7 +51,7 @@ function Tag({ label }) {
 
 function ImagePlaceholder({ initials }) {
   return (
-    <div className="bg-[#EAF0FB] rounded-xl flex items-center justify-center h-full min-h-[160px]">
+    <div className="rounded-xl flex items-center justify-center h-full min-h-[160px]">
       <span className="text-[36px] font-extrabold text-[#B8C9E8]">{initials}</span>
     </div>
   );
