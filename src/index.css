@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Libre+Baskerville:ital@1&display=swap');
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: #F7F4EE;
+  color: #0D0D0D;
+}
