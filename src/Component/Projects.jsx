@@ -1,12 +1,13 @@
 import tedxosogbo from '../assets/tedxosogbo.png'
 import ecommerce from '../assets/ecommerce_charts.png'
 import jobBoard from '../assets/job_board.png'
+import crappo from '../assets/crappo.png'
 
 const projects = [
   {
     id: "01",
     featured: true,
-    initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-black md:h-[220px]'/>,
+    initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
     name: "TedXOsogbo",
     desc: "Built the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
     tags: ["React", "TypeScript", "Tailwind"],
@@ -15,7 +16,7 @@ const projects = [
   {
     id: "02",
     featured: false,
-    initials: <img src={jobBoard} alt="tedxosogbo" className='rounded-2xl border border-black md:h-[220px]'/>,
+    initials: <img src={jobBoard} alt="job-board" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
     name: "Job Board Platform",
     desc: "Demo of a real job board platform to link employers to their potential employees.",
     tags: ["Javascript", "Tailwind"],
@@ -24,7 +25,7 @@ const projects = [
   {
     id: "03",
     featured: false,
-    initials: <img src={ecommerce} alt="tedxosogbo" className='rounded-2xl border border-black'/>,
+    initials: <img src={ecommerce} alt="ecommerce" className='rounded-2xl border border-[#555550]'/>,
     name: "Ecommerce Sales Analysis",
     desc: "A Python data analysis project that explores e-commerce sales data to uncover business insights through data cleaning, metric calculation, visualizations, and a written report.",
     tags: ["NUMPY", "MATPLTLIB"],
@@ -33,11 +34,11 @@ const projects = [
   {
     id: "04",
     featured: true,
-    initials: "AC",
-    name: "Accessibility Component Library",
+    initials: <img src={crappo} alt="crappo" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
+    name: "CRAPPO",
     desc: "A reusable, accessibility-first component library built for cross-project consistency and WCAG compliance.",
-    tags: ["React", "Storybook", "WCAG"],
-    link: "#",
+    tags: ["React", "Tailwind"],
+    link: "https://crappo-01.netlify.app/",
     reversed: true,
   },
 ];
@@ -103,7 +104,7 @@ export default function Projects() {
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((t) => <Tag key={t} label={t} />)}
                 </div>
-                <a href={project.link} className="text-[13px] font-bold text-[#1B6FE8] hover:underline">
+                <a href={project.link} target='_blank' className="text-[13px] font-bold text-[#1B6FE8] hover:underline">
                   View →
                 </a>
               </div>
@@ -122,7 +123,7 @@ export default function Projects() {
             <div className="flex flex-wrap gap-2">
               {featured[1].tags.map((t) => <Tag key={t} label={t} />)}
             </div>
-            <a href={featured[1].link} className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
+            <a href={featured[1].link} target='_blank' className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
               View project →
             </a>
           </div>
