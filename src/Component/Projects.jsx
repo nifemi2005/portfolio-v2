@@ -1,11 +1,12 @@
 import tedxosogbo from '../assets/tedxosogbo.png'
 import ecommerce from '../assets/ecommerce_charts.png'
+import jobBoard from '../assets/job_board.png'
 
 const projects = [
   {
     id: "01",
     featured: true,
-    initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-black'/>,
+    initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-black md:h-[220px]'/>,
     name: "TedXOsogbo",
     desc: "Built the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
     tags: ["React", "TypeScript", "Tailwind"],
@@ -14,7 +15,7 @@ const projects = [
   {
     id: "02",
     featured: false,
-    initials: "EC",
+    initials: <img src={jobBoard} alt="tedxosogbo" className='rounded-2xl border border-black md:h-[220px]'/>,
     name: "Job Board Platform",
     desc: "Demo of a real job board platform to link employers to their potential employees.",
     tags: ["Javascript", "Tailwind"],

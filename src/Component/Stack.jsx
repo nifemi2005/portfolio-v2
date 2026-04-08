@@ -1,5 +1,6 @@
 import { SiReact, SiTailwindcss, SiGithub, SiGit, SiHtml5 } from "react-icons/si";
-import { FaCss3Alt } from "react-icons/fa";
+import { FaCss3Alt, FaPython } from "react-icons/fa";
+import { FaR } from "react-icons/fa6";
 
 const stack = [
   {
@@ -33,10 +34,16 @@ const stack = [
     desc: "Foundation",
   },
   {
-    icon: <FaCss3Alt size={22} className="text-[#1572B6]" />,
+    icon: <FaPython size={22} className="text-[#1572B6]" />,
     bg: "bg-[#EEF4FD]",
-    name: "CSS3",
-    desc: "Styling",
+    name: "Python",
+    desc: "Data Analysis",
+  },
+  {
+    icon: <FaR size={22} className="text-[#0D0D0D]" />,
+    bg: "bg-[#F0F0F0]",
+    name: "R",
+    desc: "Data Analysis",
   },
 ];
 

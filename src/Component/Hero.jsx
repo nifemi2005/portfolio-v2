@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Badge */}
       <div className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-5">
         <div className="w-2 h-2 rounded-full bg-[#1B6FE8]" />
-        <span className="text-[13px] text-[#555550]">Frontend Developer</span>
+        <span className="text-[13px] text-[#555550]">Frontend Developer & Data Analyst</span>
       </div>
 
       {/* Name block */}
@@ -57,8 +57,8 @@ export default function Hero() {
         {/* Right: stats grid */}
         <div className="grid grid-cols-2 gap-3 flex-1">
           <div className="bg-[#1B6FE8] text-white rounded-2xl p-5">
-            <div className="text-[32px] font-extrabold leading-none">2+</div>
-            <div className="text-[12px] opacity-75 mt-1">Years experience</div>
+            <div className="text-[32px] font-extrabold leading-none">6+</div>
+            <div className="text-[12px] opacity-75 mt-1">Skill Sets</div>
           </div>
           <div className="bg-white border border-[#E2DED6] rounded-2xl p-5">
             <div className="text-[32px] font-extrabold leading-none">10+</div>

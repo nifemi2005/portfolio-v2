@@ -1,13 +1,17 @@
+import profile from '../assets/profile.png'
+
 export default function About() {
   return (
     <section className="py-12 border-t border-[#E2DED6]" id="about">
       <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6">
         About Me
       </p>
-      <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start">
+      <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-5 items-start">
         {/* Avatar */}
-        <div className="w-14 h-14 rounded-full bg-[#C7D9F5] flex items-center justify-center shrink-0">
-          <span className="text-[16px] font-extrabold text-[#1B6FE8]">YN</span>
+        <div className="flex items-center justify-center shrink-0">
+          <span className="">
+            <img src={profile} alt="Nifemi" className='rounded-full w-24 h-24' />
+          </span>
         </div>
         {/* Content */}
         <div>
