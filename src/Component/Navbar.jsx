@@ -30,6 +30,8 @@ export default function NavBar() {
         </a>
         <a
           href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[13px] font-bold text-white bg-[#1B6FE8] px-4 py-2 rounded-full hover:bg-blue-700 transition-all"
         >
           Download Resume
@@ -70,6 +72,8 @@ export default function NavBar() {
           </a>
           <a
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[13px] font-bold text-white bg-[#1B6FE8] px-4 py-2 rounded-full text-center"
           >
             Download Resume
