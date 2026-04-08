@@ -5,8 +5,8 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center py-5 border-b border-[#E2DED6] mb-14">
-      <div className="text-[15px] font-extrabold tracking-wide">YOUR NAME</div>
+    <nav className="flex justify-between items-center py-5 border-b border-[#E2DED6] mb-10 md:mb-14">
+      <div className="text-[15px] font-extrabold tracking-wide">Oluwanifemi Temenu</div>
 
       {/* Desktop links */}
       <div className="hidden md:flex items-center gap-2">
