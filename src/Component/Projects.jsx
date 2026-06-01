@@ -1,6 +1,6 @@
 import tedxosogbo from '../assets/tedxosogbo.png'
-import ecommerce from '../assets/ecommerce_charts.png'
-import jobBoard from '../assets/job_board.png'
+import hawkeye from '../assets/hawkeye.png'
+import invoice from '../assets/invoice.png'
 import crappo from '../assets/crappo.png'
 
 const projects = [
@@ -9,27 +9,27 @@ const projects = [
     featured: true,
     initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
     name: "TedXOsogbo",
-    desc: "Built the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
-    tags: ["React", "TypeScript", "Tailwind"],
+    desc: "Collaborated to build the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
+    tags: ["React", "TypeScript", "Tailwind", "SEO optimization"],
     link: "https://tedxosogbo.netlify.app/",
   },
   {
     id: "02",
     featured: false,
-    initials: <img src={jobBoard} alt="job-board" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
-    name: "Job Board Platform",
-    desc: "Demo of a real job board platform to link employers to their potential employees.",
-    tags: ["Javascript", "Tailwind"],
+    initials: <img src={invoice} alt="job-board" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
+    name: "Invoice Application",
+    desc: "A frontend invoice management application for creating, editing, and tracking invoices across their full lifecycle. Built with a clean dashboard that displays all invoices with real-time status updates across pending, draft, and paid states. Supports full CRUD operations with form validation, etc",
+    tags: ["React", "Tailwind"],
     link: "https://jobboarddemo101.netlify.app/",
   },
   {
     id: "03",
     featured: false,
-    initials: <img src={ecommerce} alt="ecommerce" className='rounded-2xl border border-[#555550]'/>,
+    initials: <img src={hawkeye} alt="ecommerce" className='rounded-2xl border border-[#555550]'/>,
     name: "Ecommerce Sales Analysis",
-    desc: "A Python data analysis project that explores e-commerce sales data to uncover business insights through data cleaning, metric calculation, visualizations, and a written report.",
-    tags: ["NUMPY", "MATPLTLIB"],
-    link: "https://github.com/nifemi2005/ecommerce-sales-analysis",
+    desc: "A real-time monitoring dashboard that streams live service metrics via WebSocket. Features animated line, bar, and area charts, a virtualized activity feed, and interactive controls including pause/resume, time-range filtering, and per-service data toggling.",
+    tags: ['Vue 3', 'TypeScript', 'ECharts', 'Pinia', 'Tailwind CSS'],
+    link: "https://hawkeyedemo.netlify.app/",
   },
   {
     id: "04",
