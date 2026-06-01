@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Badge */}
       <div className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-5">
         <div className="w-2 h-2 rounded-full bg-[#1B6FE8]" />
-        <span className="text-[13px] text-[#555550]">Frontend Developer & Data Analyst</span>
+        <span className="text-[13px] text-[#555550]">Frontend Developer</span>
       </div>
 
       {/* Name block */}

@@ -1,13 +1,19 @@
-import { SiReact, SiTailwindcss, SiGithub, SiGit, SiHtml5 } from "react-icons/si";
+import { SiReact, SiTailwindcss, SiGithub, SiGit, SiHtml5, SiTypescript, SiJavascript, SiVuedotjs, SiNextdotjs } from "react-icons/si";
 import { FaCss3Alt, FaPython } from "react-icons/fa";
 import { FaR } from "react-icons/fa6";
 
 const stack = [
   {
-    icon: <SiReact size={22} className="text-[#61DAFB]" />,
-    bg: "bg-[#E8F8FD]",
-    name: "React",
-    desc: "UI library",
+    icon: <SiHtml5 size={22} className="text-[#E34F26]" />,
+    bg: "bg-[#FEF0EE]",
+    name: "HTML & CSS",
+    desc: "Foundation",
+  },
+  {
+    icon: <SiJavascript size={22} className="text-[#F7DF1E]"/>,
+    bg: "bg-[#FEFADB]",
+    name: "Javascript",
+    desc: "Programming Language"
   },
   {
     icon: <SiTailwindcss size={22} className="text-[#38BDF8]" />,
@@ -28,23 +34,29 @@ const stack = [
     desc: "Source control",
   },
   {
-    icon: <SiHtml5 size={22} className="text-[#E34F26]" />,
-    bg: "bg-[#FEF0EE]",
-    name: "HTML & CSS",
-    desc: "Foundation",
+    icon: <SiReact size={22} className="text-[#61DAFB]" />,
+    bg: "bg-[#E8F8FD]",
+    name: "React",
+    desc: "Javascript Library",
   },
   {
-    icon: <FaPython size={22} className="text-[#1572B6]" />,
-    bg: "bg-[#EEF4FD]",
-    name: "Python",
-    desc: "Data Analysis",
+    icon: <SiTypescript size={22} className="text-[#3178C6]"/>,
+    bg: "bg-[#CEE3F5]",
+    name: "Typescript",
+    desc: "Programming Language"
   },
   {
-    icon: <FaR size={22} className="text-[#0D0D0D]" />,
+    icon: <SiVuedotjs size={22} className="text-[#42B883]"/>,
+    bg: "bg-[#CEF2E7]",
+    name: "Vue.js",
+    desc: "Javascript Framework"
+  },
+  {
+    icon: <SiNextdotjs size={22} className="text-[#000000]"/>,
     bg: "bg-[#F0F0F0]",
-    name: "R",
-    desc: "Data Analysis",
-  },
+    name: "Next.js",
+    desc: "React Framework"
+  }
 ];
 
 export default function Stack() {
