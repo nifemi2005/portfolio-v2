@@ -1,16 +1,20 @@
+import { FaGears } from "react-icons/fa6";
+
 export default function Hero() {
   return (
     <section className="pb-16" id="hero">
       {/* Badge */}
-      <div className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-5">
-        <div className="w-2 h-2 rounded-full bg-[#1B6FE8]" />
-        <span className="text-[13px] text-[#555550]">Frontend Developer</span>
+      <div className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-3">
+        <FaGears className="text-[#1B6FE8]" size={19} />
+        <span className="text-[13px] text-[#555550]">
+          From Figma to Production
+        </span>
       </div>
 
       {/* Name block */}
       <div className="mb-4">
         <span
-          className="block font-extrabold leading-none select-none pointer-events-none"
+          className="block font-extrabold leading-none pointer-events-none"
           style={{ fontSize: "clamp(60px, 12vw, 110px)", color: "#CDC7BC" }}
         >
           Temenu
@@ -27,7 +31,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6">
+      <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-3">
         Building for the web
       </p>
 
@@ -35,8 +39,9 @@ export default function Hero() {
         {/* Left: description + buttons */}
         <div className="w-full md:w-[260px] shrink-0">
           <p className="text-[13px] text-[#555550] leading-relaxed mb-6">
-            Crafting highly performant, accessible, and elegant user interfaces
-            for the modern web. Specialized in scalable web apps with seamless UX.
+            Crafting high performance, accessible, and elegant user interfaces
+            for the modern web. Specialized in scalable web apps with seamless
+            UX.
           </p>
           <div className="flex gap-3 flex-wrap">
             <a
@@ -58,21 +63,27 @@ export default function Hero() {
 
         {/* Right: stats grid */}
         <div className="grid grid-cols-2 gap-3 flex-1">
+          <div className="bg-[#F5C518] rounded-2xl p-5">
+            <div className="text-[32px] font-extrabold leading-none">2+</div>
+            <div className="text-[12px] mt-1">years experience</div>
+          </div>
+          <div className="bg-white border border-[#E2DED6] rounded-2xl p-5">
+            <div className="text-[32px] font-extrabold leading-none">10+</div>
+            <div className="text-[12px] text-[#555550] mt-1">
+              Projects shipped
+            </div>
+          </div>
           <div className="bg-[#1B6FE8] text-white rounded-2xl p-5">
             <div className="text-[32px] font-extrabold leading-none">6+</div>
             <div className="text-[12px] opacity-75 mt-1">Skill Sets</div>
           </div>
-          <div className="bg-white border border-[#E2DED6] rounded-2xl p-5">
-            <div className="text-[32px] font-extrabold leading-none">10+</div>
-            <div className="text-[12px] text-[#555550] mt-1">Projects shipped</div>
-          </div>
-          <div className="bg-[#F5C518] rounded-2xl p-5">
-            <div className="text-[32px] font-extrabold leading-none">4</div>
-            <div className="text-[12px] mt-1">Selected projects</div>
-          </div>
           <div className="bg-[#ABEFC6] rounded-2xl p-5">
-            <div className="text-[28px] font-extrabold text-[#067647] leading-none">Open</div>
-            <div className="text-[12px] text-[#067647] mt-1">To opportunities</div>
+            <div className="text-[28px] font-extrabold text-[#067647] leading-none">
+              Open
+            </div>
+            <div className="text-[12px] text-[#067647] mt-1">
+              To opportunities
+            </div>
           </div>
         </div>
       </div>
