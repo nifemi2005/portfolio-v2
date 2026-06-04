@@ -2,6 +2,8 @@ import tedxosogbo from '../assets/tedxosogbo.png'
 import hawkeye from '../assets/hawkeye.png'
 import invoice from '../assets/invoice.png'
 import crappo from '../assets/crappo.png'
+import metabnb from '../assets/metabnb.png'
+import pwa from '../assets/pwa.png'
 
 export const projects = [
   {
@@ -11,7 +13,7 @@ export const projects = [
     alt: "tedxosogbo",
     name: "TedXOsogbo",
     desc: "Collaborated to build the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
-    tags: ["React", "TypeScript", "Tailwind", "SEO optimization"],
+    tags: ["React", "TypeScript", "Tailwind", "SEO optimization", "Next.js"],
     link: "https://tedxosogbo.netlify.app/",
   },
   {
@@ -44,5 +46,25 @@ export const projects = [
     tags: ["React", "Tailwind"],
     link: "https://crappo-01.netlify.app/",
     reversed: true,
+  },
+  {
+    id: "05",
+    featured: false,
+    image: metabnb,
+    alt: "metabnb",
+    name: "METABNB",
+    desc: "An Airbnb-inspired property rental platform with browsable listings, detailed property pages, and an intuitive booking interface — built to replicate the core rental discovery experience.",
+    tags: ["React", "Tailwind"],
+    link: "https://task-metabnb.netlify.app/",
+  },
+  {
+    id: "05",
+    featured: false,
+    image: pwa,
+    alt: "tracker",
+    name: "Habit Tracker PWA",
+    desc: "A Progressive Web App for building and maintaining daily habits. Installable on any device, works offline, and tracks streaks with a clean visual dashboard.",
+    tags: ["TypeScript", "Tailwind"],
+    link: "https://pwa-habit-tracker.netlify.app/",
   },
 ];
