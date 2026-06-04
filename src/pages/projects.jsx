@@ -11,7 +11,7 @@ function Tag({ label }) {
 
 export default function ProjectsPage() {
   return (
-    <section className="py-12">
+    <section className="py-1">
       <Link
         to="/"
         className="text-[13px] font-medium text-[#555550] hover:text-[#0D0D0D] inline-flex items-center gap-1 mb-8"

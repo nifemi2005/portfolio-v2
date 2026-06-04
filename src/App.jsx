@@ -4,10 +4,12 @@ import Footer from "./Component/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import ProjectsPage from "./pages/projects";
+import ScrollToTop from "./Component/ScrollToTop";
 
 function App() {
   return (
     <div className="relative max-w-[940px] mx-auto px-7">
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
