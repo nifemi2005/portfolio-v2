@@ -4,7 +4,7 @@ import invoice from '../assets/invoice.png'
 import crappo from '../assets/crappo.png'
 import metabnb from '../assets/metabnb.png'
 import pwa from '../assets/pwa.png'
-import summarizer from '../assets/summarizer.png'
+import summarizer from '../assets/Summarizer.png'
 
 export const projects = [
   {
