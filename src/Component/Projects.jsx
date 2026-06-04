@@ -19,7 +19,6 @@ function ProjectImage({ image, alt }) {
 
 export default function Projects() {
   const featured = projects.filter((p) => p.featured);
-  const regular = projects.filter((p) => !p.featured);
 
   return (
     <section className="py-12 border-t border-[#E2DED6]" id="projects">
@@ -48,33 +47,11 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Two regular cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {regular.map((project) => (
-            <div key={project.id} className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col gap-4">
-              <ProjectImage image={project.image} alt={project.alt} />
-              <div className="flex flex-col gap-2">
-                <span className="text-[11px] font-bold tracking-widest text-[#888882] uppercase">
-                  {project.id}
-                </span>
-                <h3 className="text-[17px] font-extrabold">{project.name}</h3>
-                <p className="text-[13px] text-[#555550] leading-relaxed">{project.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((t) => <Tag key={t} label={t} />)}
-                </div>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[13px] font-bold text-[#1B6FE8] hover:underline">
-                  View →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Featured bottom (reversed) */}
         <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2 flex flex-col justify-center gap-3">
             <span className="text-[11px] font-bold tracking-widest text-[#888882] uppercase">
-              {featured[1].id}
+              {featured[1].id} — Featured
             </span>
             <h3 className="text-[20px] font-extrabold">{featured[1].name}</h3>
             <p className="text-[13px] text-[#555550] leading-relaxed">{featured[1].desc}</p>

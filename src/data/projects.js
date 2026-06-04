@@ -4,6 +4,7 @@ import invoice from '../assets/invoice.png'
 import crappo from '../assets/crappo.png'
 import metabnb from '../assets/metabnb.png'
 import pwa from '../assets/pwa.png'
+import summarizer from '../assets/summarizer.png'
 
 export const projects = [
   {
@@ -24,11 +25,11 @@ export const projects = [
     name: "Invoice Application",
     desc: "A frontend invoice management application for creating, editing, and tracking invoices across their full lifecycle. Built with a clean dashboard that displays all invoices with real-time status updates across pending, draft, and paid states. Supports full CRUD operations with form validation, etc",
     tags: ["React", "Tailwind"],
-    link: "https://jobboarddemo101.netlify.app/",
+    link: "https://invoicetracker01.netlify.app/",
   },
   {
     id: "03",
-    featured: false,
+    featured: true,
     image: hawkeye,
     alt: "hawkeye",
     name: "HawkEye",
@@ -38,7 +39,7 @@ export const projects = [
   },
   {
     id: "04",
-    featured: true,
+    featured: false,
     image: crappo,
     alt: "crappo",
     name: "CRAPPO",
@@ -58,7 +59,7 @@ export const projects = [
     link: "https://task-metabnb.netlify.app/",
   },
   {
-    id: "05",
+    id: "06",
     featured: false,
     image: pwa,
     alt: "tracker",
@@ -66,5 +67,15 @@ export const projects = [
     desc: "A Progressive Web App for building and maintaining daily habits. Installable on any device, works offline, and tracks streaks with a clean visual dashboard.",
     tags: ["TypeScript", "Tailwind"],
     link: "https://pwa-habit-tracker.netlify.app/",
+  },
+  {
+    id: "07",
+    featured: false,
+    image: summarizer,
+    alt: "Summarizer",
+    name: "AI Page Summarizer",
+    desc: "Chrome extension (Manifest V3) that extracts content from any webpage and returns a structured AI summary with key insights and estimated reading time.",
+    tags: ["TypeScript", "Tailwind", "Claude API"],
+    link: "https://github.com/nifemi2005/AI-summarizer-extension",
   },
 ];
