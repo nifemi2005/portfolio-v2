@@ -1,47 +1,5 @@
-import tedxosogbo from '../assets/tedxosogbo.png'
-import hawkeye from '../assets/hawkeye.png'
-import invoice from '../assets/invoice.png'
-import crappo from '../assets/crappo.png'
-
-const projects = [
-  {
-    id: "01",
-    featured: true,
-    initials: <img src={tedxosogbo} alt="tedxosogbo" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
-    name: "TedXOsogbo",
-    desc: "Collaborated to build the official website for TEDxOsogbo — an independently organized TED event in Osogbo, Nigeria, connecting speakers and ideas with the local community.",
-    tags: ["React", "TypeScript", "Tailwind", "SEO optimization"],
-    link: "https://tedxosogbo.netlify.app/",
-  },
-  {
-    id: "02",
-    featured: false,
-    initials: <img src={invoice} alt="job-board" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
-    name: "Invoice Application",
-    desc: "A frontend invoice management application for creating, editing, and tracking invoices across their full lifecycle. Built with a clean dashboard that displays all invoices with real-time status updates across pending, draft, and paid states. Supports full CRUD operations with form validation, etc",
-    tags: ["React", "Tailwind"],
-    link: "https://jobboarddemo101.netlify.app/",
-  },
-  {
-    id: "03",
-    featured: false,
-    initials: <img src={hawkeye} alt="ecommerce" className='rounded-2xl border border-[#555550]'/>,
-    name: "Ecommerce Sales Analysis",
-    desc: "A real-time monitoring dashboard that streams live service metrics via WebSocket. Features animated line, bar, and area charts, a virtualized activity feed, and interactive controls including pause/resume, time-range filtering, and per-service data toggling.",
-    tags: ['Vue 3', 'TypeScript', 'ECharts', 'Pinia', 'Tailwind CSS'],
-    link: "https://hawkeyedemo.netlify.app/",
-  },
-  {
-    id: "04",
-    featured: true,
-    initials: <img src={crappo} alt="crappo" className='rounded-2xl border border-[#555550] md:h-[220px]'/>,
-    name: "CRAPPO",
-    desc: "A reusable, accessibility-first component library built for cross-project consistency and WCAG compliance.",
-    tags: ["React", "Tailwind"],
-    link: "https://crappo-01.netlify.app/",
-    reversed: true,
-  },
-];
+import { Link } from 'react-router-dom';
+import { projects } from '../data/projects';
 
 function Tag({ label }) {
   return (
@@ -51,10 +9,10 @@ function Tag({ label }) {
   );
 }
 
-function ImagePlaceholder({ initials }) {
+function ProjectImage({ image, alt }) {
   return (
     <div className="rounded-xl flex items-center justify-center h-full min-h-[160px]">
-      <span className="text-[36px] font-extrabold text-[#B8C9E8]">{initials}</span>
+      <img src={image} alt={alt} className="rounded-2xl border border-[#555550] md:h-[220px] w-full object-cover" />
     </div>
   );
 }
@@ -73,7 +31,7 @@ export default function Projects() {
         {/* Featured top */}
         <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
-            <ImagePlaceholder initials={featured[0].initials} />
+            <ProjectImage image={featured[0].image} alt={featured[0].alt} />
           </div>
           <div className="md:w-1/2 flex flex-col justify-center gap-3">
             <span className="text-[11px] font-bold tracking-widest text-[#888882] uppercase">
@@ -84,7 +42,7 @@ export default function Projects() {
             <div className="flex flex-wrap gap-2">
               {featured[0].tags.map((t) => <Tag key={t} label={t} />)}
             </div>
-            <a href={featured[0].link} target='_blank' className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
+            <a href={featured[0].link} target="_blank" rel="noopener noreferrer" className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
               View project →
             </a>
           </div>
@@ -94,7 +52,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {regular.map((project) => (
             <div key={project.id} className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col gap-4">
-              <ImagePlaceholder initials={project.initials} />
+              <ProjectImage image={project.image} alt={project.alt} />
               <div className="flex flex-col gap-2">
                 <span className="text-[11px] font-bold tracking-widest text-[#888882] uppercase">
                   {project.id}
@@ -104,7 +62,7 @@ export default function Projects() {
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((t) => <Tag key={t} label={t} />)}
                 </div>
-                <a href={project.link} target='_blank' className="text-[13px] font-bold text-[#1B6FE8] hover:underline">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[13px] font-bold text-[#1B6FE8] hover:underline">
                   View →
                 </a>
               </div>
@@ -123,14 +81,23 @@ export default function Projects() {
             <div className="flex flex-wrap gap-2">
               {featured[1].tags.map((t) => <Tag key={t} label={t} />)}
             </div>
-            <a href={featured[1].link} target='_blank' className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
+            <a href={featured[1].link} target="_blank" rel="noopener noreferrer" className="text-[13px] font-bold text-[#1B6FE8] hover:underline mt-1">
               View project →
             </a>
           </div>
           <div className="md:w-1/2">
-            <ImagePlaceholder initials={featured[1].initials} />
+            <ProjectImage image={featured[1].image} alt={featured[1].alt} />
           </div>
         </div>
+      </div>
+
+      <div className="mt-8 text-center">
+        <Link
+          to="/projects"
+          className="text-[13px] font-bold text-[#0D0D0D] border border-[#0D0D0D] px-5 py-2.5 rounded-full hover:bg-[#0D0D0D] hover:text-white transition-all"
+        >
+          See all projects →
+        </Link>
       </div>
     </section>
   );

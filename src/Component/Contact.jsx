@@ -6,7 +6,7 @@ const links = [
     icon: <FaLinkedinIn size={16} />,
     label: "LinkedIn",
     value: "Oluwanifemi Temenu",
-    href: "https://www.linkedin.com/in/oluwanifemi-temenu-031a92321/",
+    href: "https://www.linkedin.com/in/oluwanifemi-temenu",
   },
   {
     icon: <SiGithub size={16} />,
@@ -41,6 +41,7 @@ export default function Contact() {
           <a
             key={item.label}
             href={item.href}
+            target="_blank"
             className="flex items-center gap-3 bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl px-4 py-3 hover:border-[#444] transition-all group"
           >
             <div className="text-[#888882] group-hover:text-white transition-colors">
