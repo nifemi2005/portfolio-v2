@@ -1,11 +1,18 @@
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { motion as Motion } from "framer-motion";
+import { slideDown } from "../lib/motion";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center py-5 border-b border-[#E2DED6] mb-10 md:mb-14">
+    <Motion.nav
+      variants={slideDown}
+      initial="hidden"
+      animate="show"
+      className="flex justify-between items-center py-5 border-b border-[#E2DED6] mb-10 md:mb-14"
+    >
       <div className="text-[15px] font-extrabold tracking-wide">Oluwanifemi Temenu</div>
 
       {/* Desktop links */}
@@ -48,7 +55,12 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="absolute top-[72px] left-0 right-0 bg-[#F7F4EE] border-b border-[#E2DED6] flex flex-col px-7 py-4 gap-3 z-50 md:hidden">
+        <Motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute top-18 left-0 right-0 bg-[#F7F4EE] border-b border-[#E2DED6] flex flex-col px-7 py-4 gap-3 z-50 md:hidden"
+        >
           <a
             href="#projects"
             onClick={() => setOpen(false)}
@@ -78,8 +90,8 @@ export default function NavBar() {
           >
             Download Resume
           </a>
-        </div>
+        </Motion.div>
       )}
-    </nav>
+    </Motion.nav>
   );
 }

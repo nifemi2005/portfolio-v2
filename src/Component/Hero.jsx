@@ -1,18 +1,29 @@
 import { FaGears } from "react-icons/fa6";
+import { motion as Motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "../lib/motion";
+
+const statVariant = {
+  hidden: { opacity: 0, scale: 0.92 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 export default function Hero() {
   return (
-    <section className="pb-16" id="hero">
+    <Motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      animate="show"
+      className="pb-16"
+      id="hero"
+    >
       {/* Badge */}
-      <div className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-3">
+      <Motion.div variants={fadeUp} className="inline-flex items-center gap-2 border border-[#E2DED6] rounded-full px-4 py-1.5 mb-3">
         <FaGears className="text-[#1B6FE8]" size={19} />
-        <span className="text-[13px] text-[#555550]">
-          From Figma to Production
-        </span>
-      </div>
+        <span className="text-[13px] text-[#555550]">From Figma to Production</span>
+      </Motion.div>
 
       {/* Name block */}
-      <div className="mb-4">
+      <Motion.div variants={fadeUp} className="mb-4">
         <span
           className="block font-extrabold leading-none pointer-events-none"
           style={{ fontSize: "clamp(60px, 12vw, 110px)", color: "#CDC7BC" }}
@@ -29,19 +40,18 @@ export default function Hero() {
         >
           Oluwanifemi
         </h1>
-      </div>
+      </Motion.div>
 
-      <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-3">
+      <Motion.p variants={fadeUp} className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-3">
         Building for the web
-      </p>
+      </Motion.p>
 
-      <div className="flex flex-col md:flex-row gap-10 items-start">
+      <Motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-10 items-start">
         {/* Left: description + buttons */}
         <div className="w-full md:w-[260px] shrink-0">
           <p className="text-[13px] text-[#555550] leading-relaxed mb-6">
             Crafting high performance, accessible, and elegant user interfaces
-            for the modern web. Specialized in scalable web apps with seamless
-            UX.
+            for the modern web. Specialized in scalable web apps with seamless UX.
           </p>
           <div className="flex gap-3 flex-wrap">
             <a
@@ -62,31 +72,25 @@ export default function Hero() {
         </div>
 
         {/* Right: stats grid */}
-        <div className="grid grid-cols-2 gap-3 flex-1">
-          <div className="bg-[#F5C518] rounded-2xl p-5">
+        <Motion.div variants={staggerContainer} className="grid grid-cols-2 gap-3 flex-1">
+          <Motion.div variants={statVariant} className="bg-[#F5C518] rounded-2xl p-5">
             <div className="text-[32px] font-extrabold leading-none">2+</div>
             <div className="text-[12px] mt-1">years experience</div>
-          </div>
-          <div className="bg-white border border-[#E2DED6] rounded-2xl p-5">
+          </Motion.div>
+          <Motion.div variants={statVariant} className="bg-white border border-[#E2DED6] rounded-2xl p-5">
             <div className="text-[32px] font-extrabold leading-none">10+</div>
-            <div className="text-[12px] text-[#555550] mt-1">
-              Projects shipped
-            </div>
-          </div>
-          <div className="bg-[#1B6FE8] text-white rounded-2xl p-5">
+            <div className="text-[12px] text-[#555550] mt-1">Projects shipped</div>
+          </Motion.div>
+          <Motion.div variants={statVariant} className="bg-[#1B6FE8] text-white rounded-2xl p-5">
             <div className="text-[32px] font-extrabold leading-none">6+</div>
             <div className="text-[12px] opacity-75 mt-1">Skill Sets</div>
-          </div>
-          <div className="bg-[#ABEFC6] rounded-2xl p-5">
-            <div className="text-[28px] font-extrabold text-[#067647] leading-none">
-              Open
-            </div>
-            <div className="text-[12px] text-[#067647] mt-1">
-              To opportunities
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </Motion.div>
+          <Motion.div variants={statVariant} className="bg-[#ABEFC6] rounded-2xl p-5">
+            <div className="text-[28px] font-extrabold text-[#067647] leading-none">Open</div>
+            <div className="text-[12px] text-[#067647] mt-1">To opportunities</div>
+          </Motion.div>
+        </Motion.div>
+      </Motion.div>
+    </Motion.section>
   );
 }

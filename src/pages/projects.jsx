@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
+import { motion as Motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "../lib/motion";
 
 function Tag({ label }) {
   return (
@@ -11,21 +13,38 @@ function Tag({ label }) {
 
 export default function ProjectsPage() {
   return (
-    <section className="py-1">
-      <Link
-        to="/"
-        className="text-[13px] font-medium text-[#555550] hover:text-[#0D0D0D] inline-flex items-center gap-1 mb-8"
+    <Motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      animate="show"
+      className="py-1"
+    >
+      <Motion.div variants={fadeUp}>
+        <Link
+          to="/"
+          className="text-[13px] font-medium text-[#555550] hover:text-[#0D0D0D] inline-flex items-center gap-1 my-8"
+        >
+          ← Back to home
+        </Link>
+      </Motion.div>
+
+      <Motion.p
+        variants={fadeUp}
+        className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6"
       >
-        ← Back to home
-      </Link>
-
-      <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6">
         All Projects
-      </p>
+      </Motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <Motion.div
+        variants={staggerContainer}
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+      >
         {projects.map((project) => (
-          <div key={project.id} className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col gap-4">
+          <Motion.div
+            key={project.id}
+            variants={fadeUp}
+            className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col gap-4"
+          >
             <img
               src={project.image}
               alt={project.alt}
@@ -49,9 +68,9 @@ export default function ProjectsPage() {
                 View project →
               </a>
             </div>
-          </div>
+          </Motion.div>
         ))}
-      </div>
-    </section>
+      </Motion.div>
+    </Motion.section>
   );
 }

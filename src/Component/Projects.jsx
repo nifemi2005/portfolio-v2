@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
+import { motion as Motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "../lib/motion";
 
 function Tag({ label }) {
   return (
@@ -22,13 +24,25 @@ export default function Projects() {
 
   return (
     <section className="py-12 border-t border-[#E2DED6]" id="projects">
-      <p className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6">
+      <Motion.p
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-[11px] font-extrabold tracking-[0.25em] uppercase text-[#0D0D0D] mb-6"
+      >
         Selected Projects
-      </p>
+      </Motion.p>
 
-      <div className="flex flex-col gap-4">
+      <Motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-50px" }}
+        className="flex flex-col gap-4"
+      >
         {/* Featured top */}
-        <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+        <Motion.div variants={fadeUp} className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
             <ProjectImage image={featured[0].image} alt={featured[0].alt} />
           </div>
@@ -45,10 +59,10 @@ export default function Projects() {
               View project →
             </a>
           </div>
-        </div>
+        </Motion.div>
 
         {/* Featured bottom (reversed) */}
-        <div className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
+        <Motion.div variants={fadeUp} className="bg-white border border-[#E2DED6] rounded-2xl p-6 flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2 flex flex-col justify-center gap-3">
             <span className="text-[11px] font-bold tracking-widest text-[#888882] uppercase">
               {featured[1].id} — Featured
@@ -65,17 +79,23 @@ export default function Projects() {
           <div className="md:w-1/2">
             <ProjectImage image={featured[1].image} alt={featured[1].alt} />
           </div>
-        </div>
-      </div>
+        </Motion.div>
+      </Motion.div>
 
-      <div className="mt-8 text-center">
+      <Motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="mt-8 text-center"
+      >
         <Link
           to="/projects"
           className="text-[13px] font-bold text-[#0D0D0D] border border-[#0D0D0D] px-5 py-2.5 rounded-full hover:bg-[#0D0D0D] hover:text-white transition-all"
         >
           See all projects →
         </Link>
-      </div>
+      </Motion.div>
     </section>
   );
 }

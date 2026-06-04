@@ -1,4 +1,3 @@
-import NavBar from "./Component/Navbar";
 import Contact from "./Component/Contact";
 import Footer from "./Component/Footer";
 import { Route, Routes } from "react-router-dom";
@@ -10,7 +9,6 @@ function App() {
   return (
     <div className="relative max-w-[940px] mx-auto px-7">
       <ScrollToTop />
-      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectsPage />} />
